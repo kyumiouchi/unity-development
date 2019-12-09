@@ -25,11 +25,40 @@ public class SetBits : MonoBehaviour
         packet = packet | (aBits << 17);
 
         Debug.Log(Convert.ToString(packet, 2).PadLeft(32, '0'));
+        long bitboard = 10101;
+        CellCount(bitboard);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    long SetCellState(long bitboard, int row, int col)
+    {
+        long newBit = 1L << (row * 8 + col);
+        return (bitboard |= newBit);
+    }
+
+    bool GetCellState(long bitboard, int row, int col)
+    {
+        long mask = 1L << (row * 8 + col);
+        return ((bitboard & mask) != 0);
+    }
+
+    int CellCount(long bitboard)
+    {
+        int count = 0;
+        long bb = bitboard;
+
+        while (bb != 0)
+        {
+            bb &= bb - 1;
+            Debug.Log(Convert.ToString(bb, 2).PadLeft(64, '0') + " count " + count);
+            //print("bb " +bb+ " count "+ count);
+            count++;
+        }
+        return count;
     }
 }

@@ -3,23 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - MAGIC
-  - INTELLIGENCE
-  - CHARISMA
-  - FLY
-  - INVISIBLE
-  - ANTMAGIC
-  - REMOVE
-  - ADD
-  - RESET
-  - DOOR_MAGIC
-  - ANTIMAGIC
-  - MAGIC_DOOR
-  - INT_DOOR
-  - CHA_DOOR
-  - FLY_DOOR
-  - INV_DOOR
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -29,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - Cube
-  - Sphere
-  - Capsule
+  - 
+  - 
+  - 
   - 
   - 
   - 
